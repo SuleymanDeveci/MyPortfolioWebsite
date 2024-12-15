@@ -16,7 +16,7 @@ header{
   background-color:#ff6200;
   max-width: 100%;
   margin: 0 auto;
-  height: 80px;
+  height: 70px;
   display:  flex;
   padding: 0 10px;
 }
@@ -77,7 +77,6 @@ nav{
   gap: 10px;
   align-items: center;
   width: max-content;
-  padding: 10px 25px;
   transition: .3s;
 }
 .download-btn:hover{
@@ -88,11 +87,13 @@ nav{
 .download-nav{
   color: black;
   border: 1.5px solid rgb(0, 0, 0);
+  padding: 10px 25px;
 }
 
 .download-body{
   color: white;
   border: 1.5px solid #fff;
+  padding: 10px 8.5px;
 }
 
 .hamburger{
@@ -119,19 +120,14 @@ nav{
 .left{
   width: 50%;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
+  height: 100vh;
   gap: 30px;
   margin-left: 60px;
+  margin-top: 125px;
 }
 
-.left .name-body{
-  background-color: #ff6200;
-  color: black;
-  width: max-content;
-  padding: 5px 15px;
-  border-radius: 10px;
-  font-weight: 700;
-}
+
 
 .left .title>span{ /* buradaki <span .title'nin sadece 
   cocuğu olan spanları sec, mesela .title'nin altindaki 
@@ -148,6 +144,21 @@ nav{
   align-items: center;
   gap: 20px;
   font-size: 14px;
+}
+
+.send-email-btn{
+  background-color: #ff6200;
+  max-width: max-content;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.send-email-btn:hover{
+  border-radius: 20px;
+  transition: .3s;
 }
 
 .social_icons{
@@ -192,10 +203,14 @@ nav{
 
 .right{
   width: 50%;
-  max-width: 100%;
+  max-width: 100%; 
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;     /* normalde bu dikey ama flex-direction column oldugu icin yatay oldu */
+  /*justify-content: center; */ /* normalde bu yatay ama flex-direction column oldugu icin dikey oldu */
+  margin-top: 100px;
+
 }
 
 .hero_wrapper{
@@ -209,7 +224,6 @@ nav{
   align-items: flex-end;
   overflow: hidden;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .hero_img{
@@ -234,6 +248,21 @@ nav{
 .hero_img:hover{
   width: 150px;
   height: 150px;
+}
+
+.name-body-container{
+  display: flex;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.name-body{
+  background-color: #ff6200;
+  color: black;
+  width: max-content;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-weight: 700;
 }
 
 @keyframes scale{
@@ -265,6 +294,14 @@ nav{
 }
 
 @media screen and (max-width: 720px) {
+  header{
+    height: 50px;
+  }
+
+  .name-nav{
+    font-size: 20px;
+  }
+
   .main-container{
     margin-top: 0px;
   }  
@@ -279,6 +316,12 @@ nav{
     width: 100%;
     gap: 30px;
     margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .name-body-container{
+    display: flex;
+    justify-content: center;
   }
 
   .btns{
@@ -294,10 +337,16 @@ nav{
 
   .right{
     width: 100%;
+    height: fit-content;
     justify-content: center;
+    margin-top: 0px;
   }
 
   .hero_wrapper{
+    margin-right: 0px;
+  }
+
+  .name-body-container{
     margin-right: 0px;
   }
 }
