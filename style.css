@@ -19,10 +19,13 @@ body{
 
 header{
   background-color:#ff6200;
-  max-width: 100%;
+  width: 100%;
   height: 70px;
+  position: fixed;
   display:  flex;
   padding: 0px 10px; /* yatay dikey */
+  top: 0;
+  z-index: 5;
 }
 
 nav{
@@ -116,19 +119,20 @@ nav{
 }
 
 #section1{
-  height: 100vh;
+  height: 60vh;
   display: flex;
-  align-items: center;
+  margin-top: 100px;
 }
 
 .left{
   width: 50%;
   display: flex;
   flex-direction:column;
-  height: 100vh;
+  justify-content: flex-start;
+  height: auto;
   gap: 30px;
   margin-left: 60px;
-  margin-top: 125px;
+  margin-top: 25px;
 }
 
 
@@ -210,10 +214,10 @@ nav{
   max-width: 100%; 
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: auto;
   align-items: center;     /* normalde bu dikey ama flex-direction column oldugu icin yatay oldu */
   /*justify-content: center; */ /* normalde bu yatay ama flex-direction column oldugu icin dikey oldu */
-  margin-top: 100px;
+  
 
 }
 
@@ -402,7 +406,7 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: #ffffff;
   gap: 80px;
 }
 
@@ -431,14 +435,13 @@ nav{
 }
 
 .skills-bottom{
-  display: flex;
+  display:flex;
   flex-wrap:wrap;
   gap: 20px;
 }
 
 .skill{
   flex: 30%;
-  background-color: rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   padding: 18px;
@@ -491,7 +494,8 @@ nav{
   flex-direction: column;
   gap: 50px;
   padding-top: 10px;
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 100px;
 }
 
 .experiences-top{
@@ -616,6 +620,7 @@ nav{
   top: 12px;
   z-index: 1;
   animation: pulse 1s infinite alternate;
+  /* alternate sayesinde animasyo bir normal hemde tersine oynuor*/
 }
 
 @keyframes pulse{
@@ -634,6 +639,7 @@ nav{
 .timeline-box:nth-child(2n)::after{
   left: -8.5%;
 }
+
 
 /* END OF EXPERIENCES SECTION STYLING */
 
@@ -663,6 +669,16 @@ nav{
   .lists, .download-nav{
     display: none;
   }
+
+  /* Experiences Section Responsive Styling*/
+
+  .timeline-box:nth-child(2n +1)::after{
+    right: -9.78%;
+  }
+  
+  .timeline-box:nth-child(2n)::after{
+    left: -9.0%;
+  }
 }
 
 @media screen and (max-width: 840px){
@@ -675,6 +691,11 @@ nav{
     padding: 30px 0px;
   }
 
+  /* Skills Section Responsive Styling */
+  .skill{
+    flex: 40%;
+  }
+
   .about-left{
     display: none;
   }
@@ -685,6 +706,14 @@ nav{
     margin-top: 100px;
     padding: 30px 0px;
   }
+
+  .timeline-box:nth-child(2n +1)::after{
+    right: -10.05%;
+  }
+  
+  .timeline-box:nth-child(2n)::after{
+    left: -9.5%;
+  }  
 }
 
 
@@ -704,6 +733,7 @@ nav{
   #section1{
     flex-direction: column-reverse;
     gap: 30px;
+    margin-top: 0px;
   }
 
   .left{
@@ -771,7 +801,10 @@ nav{
     margin-top: 100px;
     padding: 30px 0px;
   }
-
+  .skill{
+    flex: 100%;
+    gap: 30px;
+  }
   .skills-top>p:nth-child(2){
     max-width: 100%;
   }
@@ -806,6 +839,8 @@ nav{
 
   .time-traveller{
     font-size: 30px;
+    margin-top: 28px;
+    margin-bottom: -18px;
   }
 
 }
