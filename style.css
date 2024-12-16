@@ -121,7 +121,8 @@ nav{
 #section1{
   height: 60vh;
   display: flex;
-  margin-top: 100px;
+  margin-top: 150px;
+  margin-bottom: 30px;
 }
 
 .left{
@@ -170,10 +171,15 @@ nav{
 }
 
 .social_icons{
+  border: solid;
+  border-color: white;
   display:flex;
   gap: 45px;
-  margin-top: 50px;
+  margin-top: 80px;
   margin-left: 20px;
+  padding: 12px;
+  width: max-content;
+  border-radius: 8px;
 }
 
 .social_icon{
@@ -224,9 +230,10 @@ nav{
 .hero_wrapper{
   border: solid;
   border-color: #ff6200;
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
   margin-right: 20px;
+  margin-top: 10px;
   border-radius: 50%;
   display: flex;
   align-items: flex-end;
@@ -235,8 +242,8 @@ nav{
 }
 
 .hero_img{
-  width: 160px;
-  height: 150px;
+  width: 260px;
+  height: 250px;
   background-image: radial-gradient(#ff6200, purple);
   border-radius: 50%;
 }
@@ -254,21 +261,22 @@ nav{
 }
 
 .hero_img:hover{
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
 }
 
 .name-body-container{
   display: flex;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-right: 20px;
+  font-size: 30px;
 }
 
 .name-body{
   background-color: #ff6200;
   color: black;
   width: max-content;
-  padding: 5px 15px;
+  padding: 10px 30px;
   border-radius: 10px;
   font-weight: 700;
 }
@@ -596,7 +604,7 @@ nav{
 }
 
 .time-traveller{
-  position: sticky;
+  position: sticky; /* tıpkı fixed gibi ekranı takip etmek istiyor ama parrentin dışına çıkamıyor*/
   top: 50%;
   display: flex;
   align-items: center;
@@ -683,6 +691,9 @@ nav{
 
 @media screen and (max-width: 840px){
   
+  #section1{
+    margin-bottom: 200px;
+  }
   /* About Section Responsive Styling*/
   #about{
     flex-direction: column;
@@ -733,7 +744,10 @@ nav{
   #section1{
     flex-direction: column-reverse;
     gap: 30px;
-    margin-top: 0px;
+    height: 100%; /* 100vh yerine 100% kullanarak sayfa yüksekliği azaldıkça yukarı taşma sorununu çözdüm */
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 180px;
   }
 
   .left{
@@ -757,6 +771,7 @@ nav{
     margin-left: 0px;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .right{

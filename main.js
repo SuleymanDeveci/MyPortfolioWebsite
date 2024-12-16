@@ -9,7 +9,7 @@ imgElement.addEventListener("mouseenter", function () {
     wrapperDiv.style.border = "none";
     wrapperDiv.style.marginBottom = "0px";
     wrapperDiv.style.marginTop = "0px";
-    wrapperDiv.style.height = "160px";
+    wrapperDiv.style.height = "260px";
     wrapperDiv.style.borderRadius = "50%";
     //wrapperDiv.style.borderBottomLeftRadius = "50%";
     //wrapperDiv.style.borderBottomRightRadius = "50%"
@@ -23,7 +23,7 @@ imgElement.addEventListener("mouseleave", function () {
     wrapperDiv.style.border = "solid";
     wrapperDiv.style.marginBottom = "0px";
     wrapperDiv.style.marginTop = "10px";
-    wrapperDiv.style.height = "150px";
+    wrapperDiv.style.height = "250px";
     wrapperDiv.style.borderRadius = "50%";
     wrapperDiv.style.borderColor = "#ff6200"
 
