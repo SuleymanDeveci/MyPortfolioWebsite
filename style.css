@@ -3,7 +3,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* includes the border and padding */
+
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body{
@@ -15,10 +20,9 @@ body{
 header{
   background-color:#ff6200;
   max-width: 100%;
-  margin: 0 auto;
   height: 70px;
   display:  flex;
-  padding: 0 10px;
+  padding: 0px 10px; /* yatay dikey */
 }
 
 nav{
@@ -187,7 +191,7 @@ nav{
 }
 
 .youtube:hover{
-  color:red;
+  color: red;
   box-shadow: 0px 0px 40px red;
 }
 
@@ -271,6 +275,129 @@ nav{
   }
 }
 
+/* END OF HOME SECTION STYLING */
+
+/* ABOUT SECTION STYLING */
+
+#about{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-left{
+  width: 440px;
+  pointer-events: none;
+}
+
+.about-img{
+  background-color: #ff6200;
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-name{
+  color: #000000;
+  writing-mode: vertical-lr;
+  font-weight: 800;
+  letter-spacing: 20px;
+  transform: scale(-1, -1);
+  font-size: 52px;
+  margin-left: 10px;
+  margin-top: -15px;
+}
+
+.about-surname{
+  color: #000000;
+  writing-mode: vertical-lr;
+  font-weight: 800;
+  letter-spacing: 20px;
+  font-size: 52px;
+  margin-right: 10px;
+}
+
+/* About left styling end */
+
+.about-right{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.about-right-top{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-right-top>p:nth-child(1){
+  font-size: 22px;
+}
+
+.about-right-top>p:nth-child(1)>span{
+  color: #ff6200;
+}
+
+.about-right-top>p:nth-child(2){
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.about-right-top>p:nth-child(2)>span{
+  color: #ff6200;
+}
+
+.about-right-description{
+  color: gainsboro;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.about-right-btn{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  gap:10px;
+  padding-left: 5px;
+  max-width: fit-content; 
+}
+
+.about-right-btn>span{
+  background-color: #000000;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.about-right-btn:hover>span{
+  transform: translateX(5px);
+}
+
+.about-right-btn>p{
+  padding: 12px 25px;
+  background-color: #ff6200;
+  border-radius: 20px;
+}
+
+
+
+
+
+
 /* RESPONSIVE */
 
 @media  screen and (max-width: 1200px){
@@ -291,7 +418,20 @@ nav{
   .lists, .download-nav{
     display: none;
   }
+
+  /* About Section Responsive Styling*/
+  #about{
+    flex-direction: column;
+    height: 100%;
+    margin-top: 100px;
+    padding: 30px 0px;
+  }
+
+  .about-left{
+    display: none;
+  }
 }
+
 
 @media screen and (max-width: 720px) {
   header{
@@ -309,7 +449,7 @@ nav{
   #section1{
     flex-direction: column-reverse;
     gap: 30px;
-    height: 10%; /* BURADAYIZZZZZZZZZ*/
+
   }
 
   .left{
@@ -349,4 +489,25 @@ nav{
   .name-body-container{
     margin-right: 0px;
   }
+
+  /* About Section Responsive Styling*/
+
+  .about-right-top>p:nth-child(1){
+    font-size: 22px;
+  }
+  
+  .about-right-top>p:nth-child(1)>span{
+    color: #ff6200;
+  }
+  
+  .about-right-top>p:nth-child(2){
+    font-size: 48px;
+    font-weight: 600;
+  }
+  
+  .about-right-top>p:nth-child(2)>span{
+    color: #ff6200;
+    font-size: 33px;
+  }
+
 }
