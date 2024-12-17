@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
     <meta charset="UTF-8">
@@ -17,44 +17,42 @@
                 Süleyman Deveci
             </h1>
             <div class="lists">
-                <a href="" class="list">Home</a>
+                <a href="#html" class="list">Home</a>
                 <a href="#about" class="list">About Me</a>
                 <a href="#skills" class="list">Skills</a>
                 <a href="#experiences" class="list">Experiences</a>
-                <a href="" class="list">Contact Me</a>
+                <a href="#projects" class="list">My Projects</a>
             </div>
             <a href="Suleyman Deveci Resume 10122024.pdf" class="download-btn download-nav" download>
                 Download CV <i class="fa-solid fa-file-lines"></i>
             </a>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
+        <div class="list-container" id="listContainer">
+            <div class="lists2">
+                <a href="#html" class="list2">Home</a>
+                <a href="#about" class="list2">About Me</a>
+                <a href="#skills" class="list2">Skills</a>
+                <a href="#experiences" class="list2">Experiences</a>
+                <a href="#projects" class="list2">My Projects</a>
+            </div>
+        </div>
     </header>
     
-    <main class="main-container">
+    <main class="main-container" id="main">
         <section id="section1">
             <div class="left">
                 
                 <h2 class="title">I'am <span>Jr. Web Developer</span></h2>
                 <p class="description">
-                    working on creating dynamic, scalable web applications
+                    working on creating dynamic, scalable web applications.
                 </p>
                 <div class="btns">
                     <a href="mailto:suleymandeveci1907@gmail.com" class="send-email-btn">Send e-mail</a>
                     <a href="Suleyman Deveci Resume 10122024.pdf" class="download-btn download-body" download>
                         Download CV <i class="fa-solid fa-file-lines"></i>
-                    </a>
-                </div>
-                <div class="social_icons">
-                    <a href="https://www.linkedin.com/in/suleyman-deveci-kktc" target="_blank" class="social_icon linkedin">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/SuleymanDeveci" target="_blank" class="social_icon github">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCTu92d6igUWMqp-pfiiYhzQ" target="_blank" class="social_icon youtube">
-                        <i class="fa-brands fa-youtube"></i>
                     </a>
                 </div>
             </div>
@@ -67,6 +65,17 @@
                 </div>
                 <div class="name-body-container">
                     <span class="name-body">Süleyman Deveci</span>
+                </div>
+                <div class="social_icons">
+                    <a href="https://www.linkedin.com/in/suleyman-deveci-kktc" target="_blank" class="social_icon linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/SuleymanDeveci" target="_blank" class="social_icon github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCTu92d6igUWMqp-pfiiYhzQ" target="_blank" class="social_icon youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -111,7 +120,7 @@
         <section id="skills">
             <div class="skills-top">
                 <p><span>-</span>Skills</p>
-                <p>Building responsive websites and Mobile games</p>
+                <p>Constantly evolving while coding with passion.</p>
             </div>
             <div class="skills-bottom">
                 <div class="skill html">
@@ -238,7 +247,84 @@
 
         <!--Projects Section-->
             <section id="projects">
-                
+                <div class="projects-top">
+                    <p><span>-</span>My Projects</p>
+                    <p>Great projects start with small steps, but big ideas.</p>
+                </div>
+                <div class="projects-bottom">
+                    <div class="project">
+                        <div class="project-img-wrapper">
+                            <img class="project-img cargame" src="project_photos/cargame.png">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-title">Car Game 3D</p>
+                            <p class="project-meta">Game Developing</p>
+                        </div>
+                        <a href="https://suleymandeveci.itch.io/cargame3d" target="_blank" class="project-link">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <div class="project-img-wrapper">
+                            <img class="project-img tetris" src="project_photos/tetris.png">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-title">Tetris Clone Game</p>
+                            <p class="project-meta">Game Developing</p>
+                        </div>
+                        <a href="https://suleymandeveci.itch.io/tetrisclone" target="_blank" class="project-link">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <div class="project-img-wrapper">
+                            <img class="project-img harry" src="project_photos/harry.png">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-title">Care The Wizard</p>
+                            <p class="project-meta">Game Developing</p>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.SeffafGameStudios.CareTheWizard" target="_blank" class="project-link">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <div class="project-img-wrapper">
+                            <img class="project-img labirentiye" src="project_photos/labirentiye.jpg">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-title">Labirentiye</p>
+                            <p class="project-meta">Game Developing</p>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.SeffafGameStudios.Labirentiye" target="_blank" class="project-link">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <div class="project-img-wrapper">
+                            <img class="project-img codenames" src="project_photos/kodadi.png">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-title">Codenames </p>
+                            <p class="project-meta">Game Developing</p>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.SeffafGameStudios.KodAdi" target="_blank" class="project-link">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <div class="project-img-wrapper">
+                            <img class="project-img portfolio" src="project_photos/website.jpg">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-title">Responsive Portfolio</p>
+                            <p class="project-meta">Web Developing</p>
+                        </div>
+                        <a href="https://suleymandeveci.netlify.app/" target="_blank" class="project-link">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                </div>
             </section>
         <!--End of Projects Section-->
 

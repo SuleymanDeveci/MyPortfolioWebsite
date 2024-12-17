@@ -19,6 +19,8 @@ body{
 
 header{
   background-color:#ff6200;
+  border: solid;
+  border-color: #000000;
   width: 100%;
   height: 70px;
   position: fixed;
@@ -38,6 +40,45 @@ nav{
 
 .name-nav{
   font-size: 30px;
+}
+.list-container{
+  display: none;
+  border: solid;
+  border-color: #000000;
+  position: absolute;
+  right: 0;
+  margin-top: 65px;
+  width: 200px;
+  height: 200px;
+  background-color: #ff6200;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.lists2{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.list2{
+  font-size: 24px;
+  display: inline;
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+  font-weight: 550;
+  scroll-behavior: smooth;
+}
+
+.list2:hover{
+  color: #fff;
+}
+
+.list2:active{
+  color: #ff6200;
 }
 
 .lists{
@@ -69,7 +110,7 @@ nav{
 }
 
 .list:hover::before{
-  width: 100%;
+  width:100%
 }
 
 .list:active::before{
@@ -110,8 +151,12 @@ nav{
   gerektigi icin buyuk ekranda kapatiyoruz */
 }
 
+.hamburger:hover{
+  color: white;
+}
+
 .main-container{
-  max-width: 1200px;
+  max-width: 1500px;
   padding: 0 10px;
   margin: 0 auto;
   background-color: none;
@@ -131,12 +176,14 @@ nav{
   flex-direction:column;
   justify-content: flex-start;
   height: auto;
-  gap: 30px;
-  margin-left: 60px;
+  gap: 70px;
+  margin-left: 0px;
   margin-top: 25px;
 }
 
-
+.left .title{
+  font-size: 44px;
+}
 
 .left .title>span{ /* buradaki <span .title'nin sadece 
   cocuğu olan spanları sec, mesela .title'nin altindaki 
@@ -146,13 +193,14 @@ nav{
 
 .left .description{
   color: gainsboro;
+  font-size: 30px;
 }
 
 .left .btns{
   display: flex;
   align-items: center;
-  gap: 20px;
-  font-size: 14px;
+  gap: 40px;
+  font-size: 30px;
 }
 
 .send-email-btn{
@@ -170,13 +218,85 @@ nav{
   transition: .3s;
 }
 
+
+
+.right{
+  width: 50%;
+  max-width: 100%; 
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-left: 50px;
+  align-items: center;     /* normalde bu dikey ama flex-direction column oldugu icin yatay oldu */
+  /*justify-content: center; */ /* normalde bu yatay ama flex-direction column oldugu icin dikey oldu */
+
+}
+
+.hero_wrapper{
+  border: solid;
+  border-color: #ff6200;
+  height: 250px;
+  width: 250px;
+  margin-top: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.hero_img{
+  width: 260px;
+  height: 250px;
+  background-image: radial-gradient(#ff6200, purple);
+  border-radius: 50%;
+}
+
+.hero_img img{
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero_img img:hover{
+  width: 100%;
+  height: 112%;
+  animation: scale 0.9s ease-in-out alternate infinite;
+}
+
+.hero_img:hover{
+  width: 250px;
+  height: 250px;
+}
+
+.name-body-container{
+  display: flex;
+  margin-top: 30px;
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+.name-body{
+  background-color: #ff6200;
+  color: black;
+  width: max-content;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+@keyframes scale{
+  to{
+    transform: scale(1.05);
+  }
+}
+
 .social_icons{
   border: solid;
   border-color: white;
   display:flex;
   gap: 45px;
-  margin-top: 80px;
-  margin-left: 20px;
+  margin-top: 40px;
   padding: 12px;
   width: max-content;
   border-radius: 8px;
@@ -213,78 +333,6 @@ nav{
 .linkedin:hover{
   color: #2867b2;
   box-shadow: 0px 0px 40px #2867b2
-}
-
-.right{
-  width: 50%;
-  max-width: 100%; 
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  align-items: center;     /* normalde bu dikey ama flex-direction column oldugu icin yatay oldu */
-  /*justify-content: center; */ /* normalde bu yatay ama flex-direction column oldugu icin dikey oldu */
-  
-
-}
-
-.hero_wrapper{
-  border: solid;
-  border-color: #ff6200;
-  height: 250px;
-  width: 250px;
-  margin-right: 20px;
-  margin-top: 10px;
-  border-radius: 50%;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  justify-content: center;
-}
-
-.hero_img{
-  width: 260px;
-  height: 250px;
-  background-image: radial-gradient(#ff6200, purple);
-  border-radius: 50%;
-}
-
-.hero_img img{
-  width: 120%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero_img img:hover{
-  width: 100%;
-  height: 112%;
-  animation: scale 0.9s ease-in-out alternate infinite;
-}
-
-.hero_img:hover{
-  width: 250px;
-  height: 250px;
-}
-
-.name-body-container{
-  display: flex;
-  margin-top: 20px;
-  margin-right: 20px;
-  font-size: 30px;
-}
-
-.name-body{
-  background-color: #ff6200;
-  color: black;
-  width: max-content;
-  padding: 10px 30px;
-  border-radius: 10px;
-  font-weight: 700;
-}
-
-@keyframes scale{
-  to{
-    transform: scale(1.05);
-  }
 }
 
 /* END OF HOME SECTION STYLING */
@@ -419,7 +467,6 @@ nav{
 }
 
 .skills-top{
-  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -436,10 +483,9 @@ nav{
 }
 
 .skills-top>p:nth-child(2){
-  font-size: clamp(1.8rem, 1.05rem + 3.3333vw, 2.8rem);
+  font-size: clamp(24px, 17px + 2.9vw, 42px);
   font-weight: 600;
   max-width: 80%;
-  align-self: center;
 }
 
 .skills-bottom{
@@ -526,7 +572,7 @@ nav{
 .experiences-top>p:nth-child(2){
   color: #fff;
   text-align: center;
-  font-size: clamp(1.75rem, 1.09rem + 2.91vw, 2.625rem);
+  font-size: clamp(28px, 18px + 2.92vw, 42px);
   font-weight: 500;
   width: 700px;
 }
@@ -576,12 +622,7 @@ nav{
   font-size: 25px;
   font-weight: 500;
 }
-/*
-.timeline-box-des{
-  color: gainsboro;
-  line-height: 1.5;
-}
-  */
+
 .timeline-box:nth-child(2n + 1)>.timeline-box-des{
   color: #000000;
   line-height: 1.5;
@@ -600,7 +641,6 @@ nav{
   background-origin: border-box;
   top: 0%;
   left: 50%;
-  /*transform: translateX(-50%); */
 }
 
 .time-traveller{
@@ -654,10 +694,161 @@ nav{
 /* PROJECTS SECTION STYLING */
 
 #projects{
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 80px;
+  padding: 100px 0;
 }
 
+.projects-top{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projects-top>p:nth-child(1){
+  font-size: 22px;
+}
+
+.projects-top>p:nth-child(1)>span{
+  color: #ff6200;
+}
+
+.projects-top>p:nth-child(2){
+  font-size: clamp(28px, 18px + 2.92vw, 42px);
+}
+
+.projects-bottom{
+  /*columns: 350px 3;*/ /* divide the projects section into 3 parts and mak it responsive too */
+  align-self: center;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  gap: 5px 60px;
+  width: 100%;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.project{
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 10px;
+  position: relative;
+  max-width: fit-content;
+}
+
+.project-img-wrapper{
+  border: solid;
+  border-color: #ff6200;
+  border-radius: 15px;
+  background-color: rgb(24, 24, 24);
+  width: 325px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-img{
+  object-fit:cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cargame{
+  width: 300px;
+}
+
+.tetris{
+  width: 247px;
+}
+
+.harry{
+  width: 180px;
+  margin-right: 35px;
+}
+
+.labirentiye{
+  width: 160px;
+}
+
+.codenames{
+  width: 190px;
+}
+
+.portfolio{
+  margin-top: -10px;
+  width: 330px;
+}
+
+.project-info{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+  margin-left: 10px;
+  
+}
+
+.project-title{
+  font-size: 22px;
+  font-weight: 500;
+  max-width: 100%;
+  white-space: nowrap;  /* eğer metin fazla uzunsa devamının alt satıra gecmesini engeller */
+  overflow: hidden;     /* eger metin containerden dışarı taşmışsa taşan kısmı gizler */
+  text-overflow: ellipsis;  /* eger taşmadan dolayı gizlenmiş bir metin varsa ... sembolü koyar */
+}
+
+.project-meta{
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.project-link{
+  background-color: #ff6200;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  top: -50px;
+  right: 10px;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  font-size: 24px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover .project-img{
+  transform: scale(1.08);
+}
+
+.project:hover .project-link{
+  transform: rotate(0);
+}
+
+
 /* RESPONSIVE */
+@media  screen and (max-width: 1516px){
+  .projects-top{
+    display: flex;
+    position:relative;
+    width: 1100px;
+    align-self: center;
+    
+  }
+}
+
 
 @media  screen and (max-width: 1200px){
   .name-nav{
@@ -665,9 +856,29 @@ nav{
   }
 }
 
+@media  screen and (max-width: 1131px){
+  .projects-top{
+    display: flex;
+    position:relative;
+    width: 710px;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .left .btns{
+    gap: 30px;
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 940px) {
   header, .main-container{
     padding: 0 20px;
+  }
+  .left .btns{
+    gap: 30px;
+    font-size: 18px;
   }
 
   .hamburger{
@@ -694,6 +905,14 @@ nav{
   #section1{
     margin-bottom: 200px;
   }
+
+  
+
+  .left .btns{
+    gap: 20px;
+    font-size: 16px;
+  }
+
   /* About Section Responsive Styling*/
   #about{
     flex-direction: column;
@@ -727,6 +946,15 @@ nav{
   }  
 }
 
+@media screen and (max-width: 765px) {
+  .projects-top{
+    display: flex;
+    position:relative;
+    width: auto;
+    align-self: center; 
+  }
+}
+
 
 @media screen and (max-width: 720px) {
   header{
@@ -739,7 +967,11 @@ nav{
 
   .main-container{
     margin-top: 0px;
-  }  
+  } 
+  
+  .list-container{
+    margin-top: 45px;
+  }
 
   #section1{
     flex-direction: column-reverse;
@@ -757,13 +989,20 @@ nav{
     margin-top: 0px;
   }
 
-  .name-body-container{
-    display: flex;
-    justify-content: center;
+  .left .title{
+    font-size: 30px;
+    margin-bottom: -20px;
   }
 
-  .btns{
+  .left .description{
+    font-size: 16px;
+  }
+
+  .left .btns{
     justify-self: center;
+    align-self: center;
+    gap: 20px;
+    font-size: 16px;
   }
 
   .social_icons{
@@ -779,6 +1018,7 @@ nav{
     height: fit-content;
     justify-content: center;
     margin-top: 0px;
+    margin-left: 0px;
   }
 
   .hero_wrapper{
@@ -786,6 +1026,8 @@ nav{
   }
 
   .name-body-container{
+    display: flex;
+    justify-content: center;
     margin-right: 0px;
   }
 
@@ -827,6 +1069,12 @@ nav{
   /*Experiences Section Responsive Styling */
   .experiences-top>p:nth-child(2){
     max-width: 100%;
+    text-align: left;
+  }
+
+  .experiences-top{
+    text-align: left;
+    align-items:flex-start;
   }
 
   .timeline-box{
@@ -857,5 +1105,6 @@ nav{
     margin-top: 28px;
     margin-bottom: -18px;
   }
+
 
 }
