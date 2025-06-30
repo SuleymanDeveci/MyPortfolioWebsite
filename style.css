@@ -836,6 +836,22 @@ nav{
 .project:hover .project-link{
   transform: rotate(0);
 }
+/* END OF PROJECTS SECTION STYLING */
+
+/* VR SECTION STYLING */
+.vr-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vr-model{
+  margin-bottom: 25px;
+  border: 5px solid #ff6200;
+  border-radius: 25px;
+  width: 25vw;
+  height: 25vw;
+}
+/* END OF PROJECTS SECTION STYLING */
 
 
 /* RESPONSIVE */
@@ -853,6 +869,19 @@ nav{
 @media  screen and (max-width: 1200px){
   .name-nav{
     font-size: 26px;
+  }
+
+  .vr-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .vr-model{
+    margin-bottom: 25px;
+    border: 5px solid #ff6200;
+    border-radius: 25px;
+    width: 90vw;
+    height: 90vw;
   }
 }
 
